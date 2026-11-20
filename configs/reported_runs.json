@@ -1,0 +1,14 @@
+{
+  "_comment": "Random seeds of the runs behind the shipped predictions (needed only for exact retraining). intra: one k-fold run per dataset (Table 1). cross: one whole-dataset model per source, used for all targets (Table 2 and the PMP-PCQA source-target table).",
+  "intra": {
+    "SJTU":         {"seed": 1998, "k_fold_num": 9},
+    "WPC":          {"seed": 1998, "k_fold_num": 5},
+    "BASICS":       {"seed": 1,    "k_fold_num": 5},
+    "LS_PCQA_part": {"seed": 1998, "k_fold_num": 5}
+  },
+  "cross": {
+    "SJTU":         {"seed": 2,    "targets": ["WPC", "BASICS", "LS_PCQA_part"]},
+    "WPC":          {"seed": 1998, "targets": ["SJTU", "BASICS", "LS_PCQA_part"]},
+    "LS_PCQA_part": {"seed": 2,    "targets": ["SJTU", "BASICS", "WPC"]}
+  }
+}
